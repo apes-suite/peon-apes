@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peon-apes"
+description = "Helper scripts for APES."
+readme = "README.md"
+license = { text = "BSD-2-Clause" }
+version = "2025.4.3"
+dependencies = [ "pyratemp" ]
+maintainers = [
+  { name = "Harald Klimach", email = "harald.klimach@dlr.de"}
+]
+
+[project.scripts]
+harvest_series = "peons:harvest_run"
+createDirPerTimeStampForPVTU = "peons:createTimeStampDir"
+createPVDfromPVTU = "peons:createPVD"
+
+[tool.setuptools]
+packages = ["peons", "peons.tools"]
