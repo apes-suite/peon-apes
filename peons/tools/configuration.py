@@ -50,7 +50,7 @@ def get_args():
   import argparse
   import peons.tools.configargs
 
-  parser = tools.configargs.Configurator(
+  parser = peons.tools.configargs.Configurator(
              default_file = 'series.config',
              formatter_class = argparse.RawDescriptionHelpFormatter,
              description = '''
